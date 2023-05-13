@@ -12,7 +12,7 @@ function onSubmit(event){
   const step = parseInt(form.elements.step.value);
   const amount = parseInt(form.elements.amount.value);
 
-  for(let i = 0; i <= amount; i++){
+  for(let i = 0; i < amount; i++){
     const position = i + 1;
     const promise = createPromise(position, delay + (step * i));
     promise.then(({position, delay}) => {
